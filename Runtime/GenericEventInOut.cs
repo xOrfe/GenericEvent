@@ -10,7 +10,7 @@ namespace XO.GenericEvent.Runtime
     /// <typeparam name="TIn"> Type of events input parameter.</typeparam>
     /// <typeparam name="TOut"> Type of events output parameter.</typeparam>
     [Serializable]
-    public class GenericEventInOut<TIn, TOut> where TIn : EventArgs where TOut : EventArgs
+    public class GenericEventInOut<TIn, TOut>
     {
         [SerializeField] private string name;
         [SerializeField] private List<string> assignedMethods = new List<string>();

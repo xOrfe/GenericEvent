@@ -9,7 +9,7 @@ namespace XO.GenericEvent.Runtime
     /// </summary>
     /// <typeparam name="TOut"> Type of events output parameter.</typeparam>
     [Serializable]
-    public class GenericEventOut<TOut> where TOut : EventArgs
+    public class GenericEventOut<TOut>
     {
         [SerializeField] private string name;
         [SerializeField] private List<string> assignedMethods = new List<string>();

@@ -9,7 +9,7 @@ namespace XO.GenericEvent.Runtime
     /// </summary>
     /// <typeparam name="TIn"> Type of events input parameter.</typeparam>
     [Serializable]
-    public class GenericEventIn<TIn> where TIn : EventArgs
+    public class GenericEventIn<TIn>
     {
         [SerializeField] private string name;
         [SerializeField] private List<string> assignedMethods = new List<string>();
