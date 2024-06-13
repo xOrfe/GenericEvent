@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Nomad.AnimaMundi.Utilities
+namespace XO.GenericEvent.Runtime
 {
     /// <summary>
     /// GenericEvents are useful for handling large numbers of event.
