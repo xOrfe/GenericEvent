@@ -9,7 +9,7 @@ namespace XO.GenericEvent.Runtime
     /// </summary>
     /// <typeparam name="TOut"> Type of events output parameter.</typeparam>
     [Serializable]
-    public class GenericEventOut<TOut>
+    public class GenericEventOut<TOut> : GenericEventBase
     {
         [SerializeField] private string name;
         [SerializeField] private List<string> assignedMethods = new List<string>();
@@ -60,7 +60,7 @@ namespace XO.GenericEvent.Runtime
         /// <summary>
         /// Clear GenericEvent.
         /// </summary>
-        public void Clear()
+        public override void Clear()
         {
             if (MyEvent == null || MyEvent.GetInvocationList().Length <= 0) return;
             foreach (var e in MyEvent.GetInvocationList())

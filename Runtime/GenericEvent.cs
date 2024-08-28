@@ -8,7 +8,7 @@ namespace XO.GenericEvent.Runtime
     /// GenericEvents are useful for handling large numbers of event.
     /// </summary>
     [Serializable]
-    public class GenericEvent
+    public class GenericEvent : GenericEventBase
     {
         [SerializeField] private string name;
         [SerializeField] private List<string> assignedMethods = new List<string>();
@@ -58,7 +58,7 @@ namespace XO.GenericEvent.Runtime
         /// <summary>
         /// Clear GenericEvent.
         /// </summary>
-        public void Clear()
+        public override void Clear()
         {
             if (MyEvent == null || MyEvent.GetInvocationList().Length <= 0) return;
             foreach (var e in MyEvent.GetInvocationList())
