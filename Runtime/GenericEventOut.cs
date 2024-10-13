@@ -49,7 +49,7 @@ namespace XO.GenericEvent.Runtime
         /// </summary>
         /// <param name="ieArgsOutput">Output reference for invoke process.</param>
         /// <returns>Is invoke successful?</returns>
-        public bool Invoke(ref TOut ieArgsOutput)
+        public bool Invoke(out TOut ieArgsOutput)
         {
             if (MyEvent == null || MyEvent.GetInvocationList().Length <= 0) return false;
             ieArgsOutput = MyEvent.Invoke();
